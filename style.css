@@ -1,0 +1,279 @@
+:root {
+    --bg-color: #111111;
+    --primary-red: #e53935;
+    --primary-gold: #ffb300;
+    --text-color: #f5f5f5;
+    --text-muted: #aaaaaa;
+    --container-bg: #1a1a1a;
+    --border-color: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+#particle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* --- Navigation Bar --- */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(17, 17, 17, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    height: 60px;
+}
+
+.nav-logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-red);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 6rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    text-shadow: 0 0 10px var(--primary-red), 0 0 20px var(--primary-red);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+}
+
+.hero-buttons .cta-button {
+    margin: 0 0.5rem;
+}
+
+/* --- Call to Action Button --- */
+.cta-button {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--primary-red);
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-red);
+    font-size: 1.1rem;
+}
+
+.cta-button.secondary {
+    background-color: transparent;
+    color: var(--text-color);
+    border-color: var(--text-color);
+}
+
+.cta-button.secondary:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    box-shadow: 0 5px 15px rgba(245, 245, 245, 0.2);
+}
+
+.cta-button.large { padding: 15px 40px; font-size: 1.3rem; }
+.cta-button i { margin-right: 8px; }
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(229, 57, 53, 0.4);
+}
+
+/* --- Content Sections --- */
+main {
+    padding-top: 60px; /* Offset for fixed nav */
+}
+
+.content-section {
+    background-color: var(--container-bg);
+    margin: 4rem 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    padding: 3rem 2rem;
+}
+
+.content-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-gold);
+}
+
+.content-section p { color: var(--text-muted); max-width: 800px; margin: 0 auto 1.5rem auto; }
+
+/* --- Team Section --- */
+.team-grid { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; }
+.profile-card { background-color: var(--bg-color); padding: 1.5rem; border-radius: 8px; width: 250px; border: 1px solid var(--border-color); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.profile-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.7); }
+.profile-card h3 { font-family: 'Poppins', sans-serif; color: var(--text-color); margin-bottom: 0.25rem; }
+.profile-card .role { color: var(--primary-gold); font-size: 0.9rem; margin-bottom: 1rem; }
+.social-links a { color: var(--text-muted); font-size: 1.5rem; margin: 0 0.5rem; transition: color 0.3s ease; }
+.social-links a:hover { color: var(--primary-red); }
+
+/* --- Credits Section --- */
+.credits-list { text-align: left; max-width: 700px; margin: 2rem auto 0 auto; }
+.credits-list h3 { font-size: 1.5rem; color: var(--text-color); margin-top: 1.5rem; margin-bottom: 0.5rem; border-left: 3px solid var(--primary-red); padding-left: 10px; }
+.credits-list ul { list-style: none; }
+.credits-list ul li { margin-bottom: 0.5rem; background-color: var(--bg-color); padding: 8px 12px; border-radius: 4px; }
+
+/* --- Showcase Section --- */
+.image-container { margin-top: 2rem; padding: 10px; background: linear-gradient(145deg, #1f1f1f, #181818); border-radius: 8px; box-shadow: 0 0 20px rgba(0,0,0,0.6); }
+.image-container .clickable-image { cursor: zoom-in; }
+.image-container img { max-width: 100%; border-radius: 5px; border: 1px solid var(--border-color); }
+
+/* +++ NEW: Image Modal Styles +++ */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    transition: transform 0.2s ease-in-out;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* --- Download Section --- */
+#download .compatibility { margin-top: 1rem; font-size: 0.9rem; color: #888; }
+/* --- Footer --- */
+footer { text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.9rem; }
+/* --- Scroll Animations --- */
+.hidden { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.visible { opacity: 1; transform: translateY(0); }
+/* --- WIKI PAGE STYLES --- */
+.wiki-wrapper { display: flex; max-width: 1400px; margin: 100px auto 4rem auto; padding: 0 2rem; gap: 2rem; }
+.sidebar { flex: 0 0 250px; }
+.sidebar h3 { font-size: 1.2rem; color: var(--primary-gold); margin-bottom: 1rem; }
+.sidebar ul { list-style: none; }
+.sidebar ul li a { display: block; padding: 8px; color: var(--text-muted); text-decoration: none; border-radius: 4px; transition: background-color 0.3s ease, color 0.3s ease; }
+.sidebar ul li a:hover { background-color: var(--container-bg); color: var(--text-color); }
+.wiki-content { flex: 1; }
+.wiki-content section { margin-bottom: 4rem; }
+.wiki-content h1 { font-family: 'Poppins', sans-serif; font-size: 3rem; margin-bottom: 1rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; }
+.wiki-content h3 { font-family: 'Poppins', sans-serif; font-size: 1.4rem; color: var(--primary-red); margin-top: 2rem; margin-bottom: 0.5rem; }
+.wiki-content p { color: var(--text-muted); margin-bottom: 1rem; }
+.wiki-content code { background-color: var(--bg-color); padding: 3px 6px; border-radius: 4px; font-size: 0.95rem; border: 1px solid var(--border-color); }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero-content h1 { font-size: 3.5rem; }
+    .hero-content p { font-size: 1.2rem; }
+    .content-section { margin: 2rem 1rem; padding: 2rem 1rem; }
+    .container { padding: 1rem; }
+    .wiki-wrapper { flex-direction: column; }
+    .sidebar { flex: 0 0 auto; }
+}
+`

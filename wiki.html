@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hercule Wiki</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">HERCULE</a>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#showcase">Showcase</a></li>
+                <li><a href="wiki.html">Wiki</a></li>
+                <li><a href="index.html#download">Download</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="wiki-wrapper">
+        <aside class="sidebar">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="#general">General Guide</a></li>
+                <li><a href="#commands">Commands</a></li>
+                <li><a href="#modules-combat">Combat Modules</a></li>
+                <li><a href="#modules-movement">Movement Modules</a></li>
+                <li><a href="#modules-visual">Visual Modules</a></li>
+                <li><a href="#modules-player">Player Modules</a></li>
+                <li><a href="#modules-world">World Modules</a></li>
+                <li><a href="#modules-misc">Misc Modules</a></li>
+            </ul>
+        </aside>
+
+        <main class="wiki-content">
+            <section id="general">
+                <h1>General Guide</h1>
+                <p>Welcome to the Hercule Wiki. Here you will find detailed information about the client's features.</p>
+
+                <h2>Using Commands</h2>
+                <p>All client commands start with a period (`.`) in the in-game chat. For example, to toggle the Fly module, you would type <code>.toggle Fly</code> and press Enter.</p>
+
+                <h2>Binding Modules</h2>
+                <p>You can bind any module to a key on your keyboard for quick access. This allows you to toggle modules without opening the ClickGUI or typing a command. Use the <code>.bind</code> command for this.</p>
+                <p>Example: <code>.bind Killaura R</code> will bind the Killaura module to the 'R' key.</p>
+                <p>To unbind a module, use the key "none": <code>.bind Killaura none</code>.</p>
+
+                <h2>AI Integration</h2>
+                <p>Hercule integrates with Google's Gemini AI to provide a natural language interface for controlling the client. To use it, you must first get a free API key from Google AI Studio and enter it in the Console settings.</p>
+                <p>To ask the AI a question or give it a command, prefix your message with an exclamation mark (`!`).</p>
+                <p>Example: <code>! turn on fly and set killaura range to 6</code>.</p>
+                <p>The AI can understand context from recent chat messages and perform complex actions, making client control effortless.</p>
+            </section>
+
+            <section id="commands">
+                <h1>Commands</h1>
+                <!-- Commands will be dynamically populated here from your source code knowledge -->
+                <h3>.bind &lt;module&gt; &lt;key&gt;</h3><p>Binds a module to a key. Use 'none' to unbind.</p>
+                <h3>.blocktp (btp) &lt;block_name&gt; | stop</h3><p>Teleports to a specific block type.</p>
+                <h3>.clear (cls)</h3><p>Clears the client console display.</p>
+                <h3>.config (c) &lt;load/save/delete/list&gt; [name]</h3><p>Manages client configs.</p>
+                <h3>.coords (pos)</h3><p>Displays your current in-game coordinates.</p>
+                <h3>.disconnect (dc, leave)</h3><p>Disconnects you from the current server.</p>
+                <h3>.eject</h3><p>Unloads the client from the game.</p>
+                <h3>.goto &lt;x&gt; &lt;y&gt; &lt;z&gt; | stop</h3><p>Walks to the specified coordinates using pathfinding.</p>
+                <h3>.help</h3><p>Displays a list of all available commands.</p>
+                <h3>.hub</h3><p>Sends you to the server's hub.</p>
+                <h3>.panic confirm</h3><p>Disables all active modules.</p>
+                <h3>.playertp (pt) &lt;name&gt; | (nearest)</h3><p>Teleports to another player.</p>
+                <h3>.spawn</h3><p>Sends you to the server's Spawn.</p>
+                <h3>.teleport (tp) &lt;x&gt; &lt;y&gt; &lt;z&gt; | stop | deathpos</h3><p>Teleports with speed.</p>
+                <h3>.toggle (t) &lt;module&gt;</h3><p>Toggles a module by its name.</p>
+                <h3>.top</h3><p>Teleports you to the highest block above you.</p>
+                <h3>.watertp (wtp) | stop</h3><p>Teleports to the nearest water source.</p>
+                <h3>.waypoint (wp) &lt;add/remove/clear/tp&gt; [name]</h3><p>Manages waypoints.</p>
+            </section>
+            
+            <section id="modules-combat">
+                <h1>Combat Modules</h1>
+                <h3>Aimbot</h3><p>Automatically aims at the nearest entity. Highly customizable with smoothing and FOV settings.</p>
+                <h3>AutoClicker</h3><p>Automatically clicks for you, with configurable delays for both left and right mouse buttons.</p>
+                <h3>Criticals</h3><p>Forces all melee attacks to be critical hits by manipulating movement packets.</p>
+                <h3>DamageAlerts</h3><p>Shows a notification when you or another player takes damage.</p>
+                <h3>Hitbox</h3><p>Changes the size of entity hitboxes, making them easier to hit.</p>
+                <h3>InfiniteAura</h3><p>Attacks entities from a very long distance by teleporting to them, attacking, and returning in a single tick.</p>
+                <h3>Killaura</h3><p>Automatically attacks nearby entities. Features multi-target, rotation modes, and an aggressive orbital strafe.</p>
+                <h3>Reach</h3><p>Increases your block placement and entity attack reach beyond the vanilla limit.</p>
+                <h3>TpAura</h3><p>Teleports to targets to attack them, with modes like 'Above', 'Behind', and 'Up/Down'.</p>
+                <h3>TriggerBot</h3><p>Automatically attacks the entity you are looking at.</p>
+                <h3>WarpStrike</h3><p>A single-target version of InfiniteAura that blinks to an enemy, attacks, and returns.</p>
+            </section>
+
+            <section id="modules-movement">
+                <h1>Movement Modules</h1>
+                <h3>AirJump</h3><p>Allows you to jump in mid-air.</p>
+                <h3>ArrowDodge</h3><p>Automatically dodges incoming arrows with various modes like Teleport or Dash.</p>
+                <h3>AutoSprint</h3><p>Automatically sprints when moving, with a legit (forward only) and omni-directional mode.</p>
+                <h3>Bhop</h3><p>Hop around like a bunny to gain speed. Includes multiple modes for different servers.</p>
+                <h3>ExtraFly</h3><p>A simplified flight module with Killaura integration for combat.</p>
+                <h3>Fly</h3><p>Allows creative-style flight with customizable speed and advanced ground-avoidance features.</p>
+                <h3>Glide</h3><p>Makes you fall very slowly.</p>
+                <h3>Jetpack</h3><p>Fly in the direction you are looking by holding the jump key.</p>
+                <h3>LiquidWalk</h3><p>Allows you to walk on the surface of water and lava.</p>
+                <h3>Noclip</h3><p>Disables block collision, allowing you to fly through them.</p>
+                <h3>Phase</h3><p>Flattens your collision box to clip through thin walls or floors.</p>
+                <h3>Speed</h3><p>Increases your ground movement speed with various modes like Boost and ZigZag.</p>
+                <h3>Step</h3><p>Allows you to walk up full blocks without jumping.</p>
+            </section>
+            
+            <section id="modules-visual">
+                <h1>Visual Modules</h1>
+                <h3>Ambiance</h3><p>Modifies various visual game effects like block pixelation and wind speed.</p>
+                <h3>ArrayList</h3><p>Displays a list of enabled modules on your screen.</p>
+                <h3>BlockESP</h3><p>Draws an outline or box around specific, user-defined blocks like ores or spawners.</p>
+                <h3>ClickGui</h3><p>Renders the main menu for controlling the client.</p>
+                <h3>Console</h3><p>Displays an in-game console with chat logs and a command input.</p>
+                <h3>ESP</h3><p>Draws visuals (boxes, tracers) for other entities like players and mobs.</p>
+                <h3>Freecam</h3><p>Allows you to detach your camera and fly around the world. Includes a 'see-through' cavefinder mode.</p>
+                <h3>Fullbright</h3><p>Makes the world permanently bright, even in dark caves.</p>
+                <h3>HandFov</h3><p>Modifies the Field of View of your hand and held item.</p>
+                <h3>HUD</h3><p>Displays on-screen information like Keystrokes and your last death position.</p>
+                <h3>Map</h3><p>Opens a large, persistent world map with entity and waypoint rendering.</p>
+                <h3>Minimap</h3><p>Displays a small radar-like map on your screen.</p>
+                <h3>NameTags</h3><p>Enhances player nametags, showing distance and scaling with range.</p>
+                <h3>NoRender</h3><p>Disables rendering of certain game elements like particles or the sky for performance or visibility.</p>
+                <h3>Radar</h3><p>Displays a 2D radar showing nearby entities.</p>
+                <h3>StorageESP</h3><p>Highlights storage containers like chests, barrels, and shulker boxes.</p>
+                <h3>Tracer</h3><p>Draws lines from your crosshair to entities.</p>
+                <h3>Xray</h3><p>Makes common blocks invisible to find ores and caves.</p>
+                <h3>Zoom</h3><p>Zooms in your view, with a configurable level via the mouse wheel.</p>
+            </section>
+            
+            <section id="modules-player">
+                <h1>Player Modules</h1>
+                <h3>AirPlace</h3><p>Allows you to place blocks in the air without needing an adjacent block.</p>
+                <h3>AutoTool</h3><p>Automatically switches to the best tool for the block you are breaking.</p>
+                <h3>FastBreak</h3><p>Instantly breaks blocks once a certain mining progress is reached.</p>
+                <h3>FastEat</h3><p>Allows you to eat food much faster than normal.</p>
+                <h3>Gravity</h3><p>Modifies the player's gravity strength.</p>
+                <h3>NameProtect</h3><p>Changes your nametag to a custom one, visible to other players.</p>
+                <h3>NoFall</h3><p>Prevents fall damage by manipulating packets.</p>
+                <h3>PacketMine</h3><p>Instantly breaks blocks by manipulating game state and packets.</p>
+                <h3>Velocity</h3><p>Reduces or cancels knockback from attacks and explosions.</p>
+                <h3>Waypoints</h3><p>Manages and renders saved locations in the world.</p>
+            </section>
+
+            <section id="modules-world">
+                <h1>World Modules</h1>
+                <h3>AutoMine</h3><p>Finds and teleports to specified ore veins, then automatically mines them.</p>
+                <h3>Border</h3><p>Enforces world boundaries on all movement to prevent going out of bounds.</p>
+                <h3>OreTp</h3><p>A simple command-based module to teleport to the nearest specified ore.</p>
+                <h3>Scaffold</h3><p>Automatically places blocks under you as you walk, allowing you to bridge across gaps.</p>
+                <h3>WaterTp</h3><p>A command-based module to teleport to the nearest water source.</p>
+            </section>
+
+            <section id="modules-misc">
+                <h1>Misc Modules</h1>
+                <h3>AC (Anti-Cheat)</h3><p>A client-side anti-cheat that detects and alerts you if other players are likely cheating.</p>
+                <h3>AntiBot</h3><p>Filters out server-side NPCs and fake players from combat module target lists.</p>
+                <h3>Blink</h3><p>Stops sending movement packets, freezing you server-side while you move freely client-side.</p>
+                <h3>Disabler</h3><p>Attempts to bypass server-side anti-cheats using various packet manipulation techniques.</p>
+                <h3>FakeLag</h3><p>Rhythmically stops sending packets to create fake lag and make you harder to hit.</p>
+                <h3>ItemSucker</h3><p>Automatically teleports to nearby dropped items to collect them quickly.</p>
+                <h3>MarketplaceUnlocker</h3><p>Unlocks marketplace items for free on the main menu.</p>
+                <h3>NoFriend</h3><p>Temporarily ignores your friends list, allowing combat modules to target them.</p>
+                <h3>PlayerList</h3><p>Shows a player list (tab list) and provides join/leave/vanish notifications for staff members.</p>
+                <h3>Timer</h3><p>Modifies the game's tick speed (TPS), speeding up or slowing down all actions.</p>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>

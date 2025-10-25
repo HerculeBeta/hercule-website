@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hercule Client</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">HERCULE</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#showcase">Showcase</a></li>
+                <li><a href="wiki.html">Wiki</a></li>
+                <li><a href="#download">Download</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1 class="glitch" data-text="HERCULE">HERCULE</h1>
+            <p>The Definitive Minecraft Experience, Redefined.</p>
+            <div class="hero-buttons">
+                <a href="#download" class="cta-button"><i class="fas fa-download"></i> Download</a>
+                <a href="wiki.html" class="cta-button secondary"><i class="fas fa-book"></i> Read the Wiki</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="content-section hidden">
+            <div class="container">
+                <h2>What is Hercule?</h2>
+                <p>Hercule is a high-performance client for Minecraft for Windows, designed to elevate your gameplay. With a suite of powerful modules, a sleek and intuitive interface, and a focus on stability, Hercule provides the tools you need to dominate, explore, and create like never before.</p>
+            </div>
+        </section>
+
+        <section id="showcase" class="content-section hidden">
+            <div class="container">
+                <h2>Intuitive & Powerful Interface</h2>
+                <p>Manage every feature with ease through our clean, modern, and fully customizable ClickGUI. Everything you need is just a click away.</p>
+                <div class="image-container">
+                    <!-- The image now has an ID and a class to make it interactive -->
+                    <img src="clickgui-screenshot.png" alt="Hercule Client ClickGUI Showcase" id="showcase-img" class="clickable-image">
+                </div>
+            </div>
+        </section>
+        
+        <section id="team" class="content-section hidden">
+            <div class="container">
+                <h2>The Team</h2>
+                <div class="team-grid">
+                    <div class="profile-card">
+                        <h3>Joker</h3>
+                        <p class="role">Lead Developer</p>
+                        <div class="social-links">
+                            <a href="https://discordapp.com/users/835111529690562580" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+                            <a href="https://github.com/HerculeBeta" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <h3>Zynur</h3>
+                        <p class="role">Contributor</p>
+                        <div class="social-links">
+                            <a href="https://discordapp.com/users/514763363428073484" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="credits" class="content-section hidden">
+            <div class="container">
+                <h2>Credits & Acknowledgements</h2>
+                <p>Hercule is built on the shoulders of giants. We extend our sincere gratitude to the developers and communities whose work inspired and contributed to this project.</p>
+                <div class="credits-list">
+                    <h3>Inspiration & Code</h3>
+                    <ul>
+                        <li><strong>Horion Client:</strong> For foundational concepts and inspiration.</li>
+                        <li><strong>BoostV2:</strong> For advanced feature logic and bypass techniques.</li>
+                    </ul>
+                    <h3>Special Thanks</h3>
+                    <ul>
+                        <li>All the beta testers who helped identify bugs and refine features.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="content-section hidden">
+            <div class="container">
+                <h2>Get Started</h2>
+                <p>Download the latest version of Hercule and unleash your potential.</p>
+                <a href="https://github.com/your-username/Hercule/releases/latest/download/Hercule.dll" class="cta-button large">
+                    <i class="fas fa-download"></i> Download Latest Version
+                </a>
+                <p class="compatibility">Compatible with Minecraft for Windows v1.21.81.2</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- +++ NEW: Image Modal Structure +++ -->
+    <div id="imageModal" class="modal">
+        <span class="close-button">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Hercule Client. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
